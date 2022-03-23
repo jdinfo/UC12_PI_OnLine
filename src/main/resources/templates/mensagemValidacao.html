@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/Layout">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Filomena</title>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+	rel="stylesheet">
+
+</head>
+
+<body>
+	<div>
+		
+		<!--<h4>Mensagem de Validação</h4>-->
+
+		<div th:if="${not #strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}"></span>
+		</div>
+
+		<div th:if="${not #strings.isEmpty(mensagem_erro)}">
+			<span th:text="${mensagem_erro}"></span>
+		</div>
+		
+	</div>
+</body>
+
+</html>

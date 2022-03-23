@@ -1,0 +1,437 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*list-style: none;*/
+}
+
+.all{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	width:85%;
+}
+
+h3 {
+	color: rgb(7, 17, 92);
+	font-size: 55px;
+	text-align: center;
+	font-family: 'Tangerine', cursive;
+}
+
+.corpo_lista{
+	width: 300px;
+	height: 200px;
+	background-color: rgba(232, 230, 160, 0.439);
+}
+
+.nome_cadastro {
+	font-size: 55px;
+}
+
+.nome_listagem {
+	font-size: 18px;
+	padding: 5px;
+	margin: 10px;
+}
+
+.table_lista{
+	 width: 800px;
+}
+
+.titulo_cadastrado {
+	font-size: 37px;
+	padding: 10px;
+}
+
+body {
+	max-width: 1200px;
+	margin: auto;
+	
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "h h" "m m" "f f";
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+
+.container_historia {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "h h" "a m" "f f";
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.container_oracoes {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "h h" "a m" "f f";
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+/* essa classe container_milagres é igual a classe container_historia e container_oracoes, fazer otimização*/
+
+.container_milagres {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "h h" "a m" "f f";
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.container_contato {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "h h" "m a" "f f";
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	grid-area: h;
+}
+
+.corpo_formulario {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+}
+
+.container_formulario {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+	background-image: url(../_img/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.nome_botoes {
+	width: 80%;
+}
+
+h1 {
+	color: rgb(7, 17, 92);
+	font-size: 100px;
+	text-align: center;
+	font-family: 'Tangerine', cursive;
+}
+
+.botoes {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: space-between;
+	list-style: none;
+	font-size: 30px;
+	
+}
+
+.container_cadastro{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: center;
+}
+
+.botoes_cadastro{
+	
+	justify-content: space-between;
+	list-style: none;
+	font-size: 30px;
+	
+	width: 250px;
+	height: 30px;
+	background-color: rgba(232, 230, 160, 0.439);
+	font-size: 22px;
+}
+
+#caixa_botoes_novena {
+	width: 100%;
+	background-color: rgba(222, 184, 135, 0.57);
+}
+
+.dias_novena {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: space-evenly;
+	list-style: none;
+	font-size: 18px;
+	align-items: center;
+}
+
+.botoes_lateral {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-evenly;
+	list-style: none;
+	font-size: 20px;
+	padding: 10px;
+}
+
+a:hover {
+	color: rgb(0, 0, 0);
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(7, 17, 92);
+}
+
+main {
+	background-color: rgba(96, 118, 75, 0.467);
+	grid-area: m;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.imagem_historia {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.conteudo_milagres {
+	width: 100%;
+	background-color: rgba(186, 199, 70, 0.076);
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.principal_sacramentais {
+	background-color: rgba(96, 118, 75, 0.467);
+	grid-area: m;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#mensagem_enviada {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.descricao {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: center;
+	width: 300px;
+}
+
+.intern {
+	height: 150px;
+	align-self: center;
+	justify-content: center;
+}
+
+#linha_1 {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-content: center;
+	padding: 15px;
+}
+
+#linha_2 {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-content: center;
+	padding: 15px;
+}
+
+.coroinha {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.titulo {
+	text-align: center;
+	font-size: 15px;
+}
+
+.conteudo {
+	text-align: center;
+	padding: 15px;
+	font-size: 19px;
+}
+
+.conteudo_historia {
+	text-align: center;
+	font-size: 19px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.conteudo_medalha {
+	display: flex;
+	flex: row;
+	padding: 10px;
+}
+
+#ladainha {
+	font-size: 15px;
+}
+
+#medalha {
+	font-size: 16px;
+	text-align: center;
+}
+
+form {
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+fieldset {
+	padding: 20px;
+	width: 150%;
+	height: 130px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.fieldset_oracao{
+	padding: 5px;
+	width: 150%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#campo_texto {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#botoes_inferior {
+	display: flex;
+	justify-content: center;
+}
+
+label.entrada {
+	width: 75px;
+	float: left;
+	text-align: right;
+	padding: 5px;
+}
+
+fieldset.div {
+	padding: 10px;
+}
+
+aside {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+}
+
+.lateral_esquerda_contato {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.lateral_direita_contato {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+	background-image: url(../_img/fundo_direito_contato.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: justify;
+}
+
+.lateral_historia {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+	display: flex;
+	justify-content: center;
+}
+
+.lateral_oracoes {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+	display: flex;
+	justify-content: center;
+}
+
+/* essa classe lateral_milagres é igual a classe lateral_historia e lateral_oracoes, fazer otimização*/
+.lateral_milagres {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+	display: flex;
+	justify-content: center;
+}
+
+/* essa classe lateral_contato é igual a classe lateral_historia,lateral_oracoes e lateral_milagres, fazer otimização*/
+.lateral_contato {
+	background-color: rgba(162, 194, 19, 0.481);
+	grid-area: a;
+	display: flex;
+	justify-content: center;
+}
+
+footer {
+	background-color: rgba(4, 60, 29, 0.405);
+	grid-area: f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: burlywood;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

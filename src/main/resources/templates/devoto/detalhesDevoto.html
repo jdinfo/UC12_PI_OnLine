@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/Layout">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Filomena</title>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div>
+				<img src="_img/logo/ancora.png" alt="">
+			</div>
+			<div class="nome_botoes">
+				<h1>Santa Filomena</h1>
+				<ul class="botoes">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="historia.html">História</a></li>
+					<li><a href="oracoes.html">Orações</a></li>
+					<li><a href="sacramentais.html">Sacramentais</a></li>
+					<li><a href="milagres.html">Milagres</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="_img/logo/cruz.png" alt="">
+			</div>
+		</header>
+
+		<main class="corpo_formulario">
+
+			<div class="container_cadastro">
+				<ul class="botoes_cadastro">
+					<li><a href="/">Seja um Devoto</a></li>
+				</ul>
+				<ul class="botoes_cadastro">
+					<li><a href="/cadastrarDevoto">Cadastrar</a></li>
+				</ul>
+				<ul class="botoes_cadastro">
+					<li><a href="/devotos">Lista de Devotos</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<h2>Página para adicionar Orações para os Devotos de Santa Filomena.</h2>
+			</div>
+			
+			
+			<div class="all">
+			
+			
+				<div th:each="devoto : ${devoto}">
+				<p>Detalhes do Devoto</p>
+					<br>
+					<p>
+						<b>Nome: </b><span th:text="${devoto.nome}"></span>
+					</p>
+					<p>
+						<b>E-mail: </b><span th:text="${devoto.email}"></span>
+					</p>
+					<p>
+						<b>Celular: </b><span th:text="${devoto.celular}"></span> <br>
+					</p>
+				</div>
+				<div>
+				
+					<h2>Adicionar Oração</h2>
+
+					<th:block th:include="mensagemValidacao"></th:block>
+
+					<br>
+					<form name="cadastro_oracoes" action="" method="POST" th:object="${oracao}">
+						<fieldset class="fieldset_oracao">
+
+							<div>
+								<div id="formulario_itens">
+									<label class="entrada" for="titulo">Título da Oração:</label>
+									<input type="text" value="" name="titulo" id="titulo" placeholder="Digite aqui a Oração desejada" required>
+								</div>
+								<br>
+								<div id="formulario_itens">
+									<label class="entrada" for="versao">Versão da Oração:</label>
+									<input type="text" value="" name="versao" id="versao" placeholder="Digite aqui a versao">
+								</div>
+								<br>
+								<div id="botoes_inferior">
+									<button type="submit" width=100px>Enviar</button>
+									<button type="reset" width=100px>Limpar</button>
+								</div>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+				<div class="corpo_lista">
+					<h4>Lista de Orações</h4>
+					<br>
+
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">Título da Oração</th>
+								<th scope="col">Versão</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="oracao : ${oracoes}">
+								<td><span th:text="${oracao.tituloOracao}"></span></td>
+								<td><span th:text="${oracao.versao}"></span></td>
+								<td><button>teste</button></td>
+								
+								<td><a th:href="${(#mvc.url('DC#deletarOracao').arg(0, oracao.versao)).build()}"><button type="button" width=100px>Excluir</button></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+		</main>
+		<footer>
+			<p>@2021 - JC Design</p>
+		</footer>
+	</div>
+
+</body>
+</html>

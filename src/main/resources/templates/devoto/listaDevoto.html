@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/Layout">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Filomena</title>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div>
+				<img src="_img/logo/ancora.png" alt="">
+			</div>
+			<div class="nome_botoes">
+				<h1>Santa Filomena</h1>
+				<ul class="botoes">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="historia.html">História</a></li>
+					<li><a href="oracoes.html">Orações</a></li>
+					<li><a href="sacramentais.html">Sacramentais</a></li>
+					<li><a href="milagres.html">Milagres</a></li>
+					<li><a href="contato.html">Contato</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="_img/logo/cruz.png" alt="">
+			</div>
+		</header>
+		<main class="corpo_formulario">
+			<div class="container_cadastro">
+				<ul class="botoes_cadastro">
+					<li><a href="/">Seja um Devoto</a></li>
+				</ul>
+				<ul class="botoes_cadastro">
+					<li><a href="/cadastrarDevoto">Cadastrar</a></li>
+				</ul>
+				<ul class="botoes_cadastro">
+					<li><a href="/devotos">Lista de Devotos</a></li>
+				</ul>
+			</div>
+
+			<h2>Página de Devotos de Santa Filomena cadastrados.</h2>
+			<h2>Que Santa Filomena abençõe a todos!</h2>
+
+			<div>
+				<table class="table_lista">
+					<thead>
+						<tr>
+							
+							
+							<th scope="col">Nome</th>
+							<th scope="col">E-mail</th>
+							<th scope="col">Celular</th>
+
+							<th scope="col"></th>
+							<th scope="col">Ações:</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="devoto: ${devotos}">
+							<td><a th:href="${(#mvc.url('DC#detalhesDevoto').arg(0, devoto.codigo)).build()}"><span th:text="${devoto.nome}"></span></a></td>
+							<td><span th:text="${devoto.email}"></span></td>
+							<td><span th:text="${devoto.celular}"></span></td>
+							<td><span></span></td>
+							<td><a th:href="${(#mvc.url('DC#deletarDevoto').arg(0, devoto.codigo)).build()}"><button type="button">Excluir</button></a></td>
+							<td><a th:href="${(#mvc.url('DC#editarDevoto').arg(0, devoto.codigo)).build()}"><button type="button">Editar</button></a></td>
+							<td><a th:href="${(#mvc.url('DC#detalhesDevoto').arg(0, devoto.codigo)).build()}"><button type="button">Adicionar Oração</button></a></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</main>
+		<footer>
+			<p>@2021 - JC Design</p>
+		</footer>
+	</div>
+
+</body>
+</html>
